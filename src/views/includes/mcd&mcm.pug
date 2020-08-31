@@ -1,0 +1,23 @@
+.main-description
+  h1.title Calculadora de mcd y mcm
+  p.description Calcula online el máximo común divisor (mcd) y el mínimo común múltiplo (mcm) de varios números a la vez.
+  p.description Ingresa el número y pulsa en añadir o presiona ENTER. Cuando los tengas todos añadidos, dale a calcular.
+.mcd_mcm
+  .mcd_mcm__title Calculadora de mcd y mcm
+  input(type="number" placeholder="Introduce un número" title="Puedes añadir pulsando Enter")#mcd_mcm__input.mcd_mcm__input
+  button#mcd_mcm__btn-add.mcd_mcm__btn-add +
+  #mcd_mcm__numbers.mcd_mcm__numbers
+  #mcd_mcm__result.mcd_mcm__result
+    .result__mcd
+      .result__title mcd
+      #result__text-mcd.result__text 
+    .result__mcm
+      .result__title mcm
+      #result__text-mcm.result__text 
+  button#mcd_mcm__btn-result.mcd_mcm__btn-result Calcular
+footer.footer
+  a(href="http://dgbdevelopment.com")
+    img(src="assets/img/Logo2-Negro-con-borde.svg", alt="Logo DGB Development")
+    span DGB Development
+
+  

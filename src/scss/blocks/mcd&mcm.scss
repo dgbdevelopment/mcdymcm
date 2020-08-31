@@ -1,0 +1,153 @@
+.main-description {
+  width: 300px;
+  margin-bottom: 1rem;
+  & h1.title {
+    font-size: 1.5rem;
+    color: #000860;
+    text-shadow: 2px 2px 5px #ffffff;
+  }
+  & p.description {
+    text-align: justify;
+    font-size: 0.8rem;
+  }
+}
+.mcd_mcm {
+  position: relative;
+  width: 300px;
+  min-height: 568px;
+  background-color: $bg-color;
+  border-radius: 20px;
+  @include neu-border(4px);
+}
+.mcd_mcm__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 90%;
+  margin: 1rem auto;
+  text-align: center;
+  font-family: $main-title;
+  color: $dark-color;
+}
+.mcd_mcm__input {
+  display: inline-block;
+  margin: 1.5rem auto 1rem 2rem;
+  width: 60%;
+  padding: 0 0.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  @include neu-input(2px);
+  &::placeholder {
+    font-size: 0.8rem;
+    transform: translateY(-2px);
+    opacity: 0.8;
+  }
+  &[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+.mcd_mcm__btn-add {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 7px;
+  margin-left: 1rem;
+  outline: none;
+  color: $dark-color;
+  background-color: $bg-color-two;
+  font-size: 1.5rem;
+  user-select: none;
+  cursor: pointer;
+  @include neu-border(2px);
+  &:active {
+    @include neu-inset-border(2px);
+    color: $primary-color;
+  }
+}
+.mcd_mcm__btn-result {
+  @extend .mcd_mcm__btn-add;
+  display: block;
+  margin: 1.5rem auto;
+  width: 80%;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 7px;
+}
+.mcd_mcm__numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  padding: 0.5rem 0;
+  width: 80%;
+  margin: 1rem auto;
+  min-height: 13rem;
+  border-radius: 15px;
+  overflow-x: auto;
+  @include neu-inset-border(2px);
+  & > span {
+    height: 25px;
+    line-height: 25px;
+  }
+}
+.mcd_mcm__result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  width: 80%;
+  margin: 1rem auto;
+  min-height: 7rem;
+  padding: 0 0.3rem;
+  border-radius: 15px;
+  @include neu-inset-border(2px);
+}
+.result__mcd,
+.result__mcm {
+  display: none;
+  &--show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+}
+.result__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: $main-title;
+  color: $dark-color;
+}
+.disabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+}
+.footer {
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  opacity: 0.7;
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+  }
+  & a img {
+    width: 32px;
+    height: 32px;
+  }
+  & a span {
+    margin-left: 1rem;
+  }
+}
